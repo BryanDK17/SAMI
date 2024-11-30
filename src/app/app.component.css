@@ -1,0 +1,14 @@
+.header {
+    height: 145px;
+    background-color: #8bc34a;
+    /* background-color: #a8d5a8; */
+
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+}

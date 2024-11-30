@@ -1,0 +1,10 @@
+.cuadro {
+    border: 2px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 10px;
+    width: 1485px;
+    height: 620px;
+    float: left;
+    margin: 20px;
+
+}
