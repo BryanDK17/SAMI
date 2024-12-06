@@ -1,19 +1,48 @@
 .cuadro {
-    border: 2px solid #ccc;
-    background-color: #f2f2f2;
-    padding: 10px;
+
     width: 1485px;
     height: 620px;
     float: left;
-    margin: 20px;
-
 }
 
+
 .cuadro2 {
-    padding: 10px;
     width: 690px;
     height: 560px;
     float: left;
-    margin: 20px;
+}
 
+.login-container {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 82.6vh;
+    background-image: url("C:/sitiosweb/Proyectos/SAMI/public/asset/bosque.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: background-slideshow 60s infinite ease-in-out;
+}
+
+.glass-container {
+    height: 620px;
+    width: 1400px;
+    padding: 30px 50px;
+    margin: 20px;
+    border-radius: 50px;
+    float: left;
+    background-color: rgba(0, 255, 0, 0.3s);
+    backdrop-filter: blur(25px);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.811);
+}
+
+h1 {
+    color: rgba(0, 0, 0, 0.798);
 }

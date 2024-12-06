@@ -7,33 +7,39 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { RecomendacionesComponent } from './components/recomendaciones/recomendaciones.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
 export const routes: Routes = [
 
     {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+    },
+    {
         path: "login",
         component: LoginComponent
-    },
-    {
-        path: "configuracion",
-        component: ConfiguracionComponent
-    },
-    {
-        path: "historial",
-        component: HistorialComponent
     },
     {
         path: "home",
         component: HomeComponent
     },
     {
-        path: "noticias",
-        component: NoticiasComponent
+        path: "historial",
+        component: HistorialComponent
     },
     {
         path: "recomendaciones",
         component: RecomendacionesComponent
+    },
+    {
+        path: "noticias",
+        component: NoticiasComponent
+    },
+    {
+        path: "configuracion",
+        component: ConfiguracionComponent
     }
 ];

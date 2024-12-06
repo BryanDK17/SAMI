@@ -1,14 +1,23 @@
 <div class="login-container">
-    <h1>SAMI</h1><br><br>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div class="glass-container">
+        <div class="form-container">
+            <h1>SAMI</h1><br>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                    <input type="email" name="EmailId" [(ngModel)]="loginObj.EmailId" class="form-control"
+                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" name="Password" [(ngModel)]="loginObj.Password" class="form-control"
+                        id="exampleInputPassword1">
+                </div>
+                <button type="submit" (click)="onLogin()" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+        <div class="logo-container">
+            <!-- <img src="C:/sitiosweb/Proyectos/SAMI/public/asset/logosami2.jpg" class="logo"> -->
         </div>
-        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-    </form>
+    </div>
 </div>

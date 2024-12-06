@@ -1,14 +1,72 @@
+@keyframes background-slideshow {
+    0% {
+        background-image: url('C:/sitiosweb/Proyectos/SAMI/public/asset/verde2.jpg');
+    }
+
+    50% {
+        background-image: url('C:/sitiosweb/Proyectos/SAMI/public/asset/verde3.jpg');
+    }
+
+    100% {
+        background-image: url('C:/sitiosweb/Proyectos/SAMI/public/asset/verde2.jpg');
+    }
+}
+
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #8bc34a;
+    /* background-image: url("C:/sitiosweb/Proyectos/SAMI/public/asset/canola.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: background-slideshow 60s infinite ease-in-out;
 }
+
+.glass-container {
+    height: 382px;
+    width: 1000px;
+    display: flex;
+    padding: 30px 50px;
+    border-radius: 50px;
+    float: left;
+    background-color: rgba(0, 255, 0, 0.3s);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+}
+
+.form-container {
+    flex: 2;
+    /* Ocupa más espacio que el logo */
+}
+
+/* Contenedor del logo
+.logo-container {
+    flex: 1;
+    /* Ocupa menos espacio
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ Estilo del logo
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    /* Mantiene proporciones
+} */
 
 h2 {
     font-size: 24px;
+}
+
+h1 {
+    color: white;
 }
 
 label {
@@ -25,12 +83,16 @@ input {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #333;
+    background-color: rgb(108, 59, 42);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #a18262;
+}
+
+.form-label {
+    color: white;
 }

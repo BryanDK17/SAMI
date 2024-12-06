@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { subscribe } from 'diagnostics_channel';
 
 @Component({
   selector: 'app-login',
@@ -11,19 +13,26 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  email: string = '';
-  password: string = '';
+  loginObj: any = {
+
+    "EmailId": "",
+    "Password": ""
+  };
+
+  http = inject(HttpClient);
 
   constructor(private router: Router) { }
 
-  onSubmit() {
-    // Aquí podrías agregar la lógica de autenticación
-    if (this.email === '21690160@tecvalles.mx' && this.password === '123') {
-      // Redirigir al componente "Home"
-      this.router.navigate(['/home']);
-    } else {
-      alert('Credenciales incorrectas');
-    }
-  }
+  onLogin() {
+    console.log("Navegando al componente home");
+    this.router.navigateByUrl("home");
 
+    // this.http.post("https://freeapi.miniprojectideas.com/api/User/Login", this.loginObj).subscribe((res: any) => {
+    //   if (res.result) {
+    //     alert("Login Success");
+    //   } else {
+    //     alert("Check email or password");
+    //   }
+    // })
+  }
 }
