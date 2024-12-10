@@ -26,7 +26,7 @@
 }
 
 .glass-container {
-    height: 382px;
+    height: 550px;
     width: 1000px;
     display: flex;
     padding: 30px 50px;
@@ -65,7 +65,9 @@ h2 {
     font-size: 24px;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     color: white;
 }
 

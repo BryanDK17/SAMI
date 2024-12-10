@@ -32,8 +32,7 @@
     margin: 20px;
     border-radius: 50px;
     float: left;
-    background-color: rgba(0, 255, 0, 0.3s);
-    backdrop-filter: blur(25px);
+    background-color: #ffffff;
     border-top: 1px solid rgba(255, 255, 255, 0.7);
     border-left: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
@@ -44,5 +43,24 @@ h2 {
 }
 
 h1 {
-    color: rgba(0, 0, 0, 0.798);
+    color: white;
+}
+
+.header {
+    height: 146px;
+    background: linear-gradient(to right, #30391f, #67a934);
+}
+
+button {
+    margin: 0 10px;
+    padding: 9px 20px;
+    border: none;
+    background-color: rgb(108, 59, 42);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a18262;
 }

@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { subscribe } from 'diagnostics_channel';
+import { AuthService } from '../../services/auth.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-login',
@@ -11,28 +12,31 @@ import { subscribe } from 'diagnostics_channel';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
+
 export class LoginComponent {
 
-  loginObj: any = {
+  email: string = '';
+  password: string = '';
 
-    "EmailId": "",
-    "Password": ""
-  };
-
-  http = inject(HttpClient);
-
-  constructor(private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   onLogin() {
-    console.log("Navegando al componente home");
-    this.router.navigateByUrl("home");
 
-    // this.http.post("https://freeapi.miniprojectideas.com/api/User/Login", this.loginObj).subscribe((res: any) => {
-    //   if (res.result) {
-    //     alert("Login Success");
-    //   } else {
-    //     alert("Check email or password");
-    //   }
-    // })
+    this.authService.login(this.email, this.password).subscribe(
+      (response) => {
+        console.log('Inicio de sesion exitoso:', response);
+        this.router.navigateByUrl("home");
+      },
+      (error) => {
+        console.error('Error de inicio de sesion:', error);
+        alert('Credenciales incorrectas');
+      }
+    );
   }
+
+  Registro() {
+    this.router.navigateByUrl("registro");
+  }
+
+
 }

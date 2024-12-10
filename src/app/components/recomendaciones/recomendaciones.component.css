@@ -25,7 +25,27 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
 }
 
+h1,
 h3,
 h4 {
     color: rgba(255, 255, 255, 0.878);
+}
+
+.header {
+    height: 146px;
+    background: linear-gradient(to right, #30391f, #67a934);
+}
+
+button {
+    margin: 0 10px;
+    padding: 9px 20px;
+    border: none;
+    background-color: rgb(108, 59, 42);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a18262;
 }

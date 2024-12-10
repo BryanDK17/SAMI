@@ -1,12 +1,54 @@
+<div class="header">
+    <br>
+    <h1 style="color: white;">SAMI</h1>
+    <br>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <button type="submit" (click)="onHome()" class="btn btn-success">Home</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onHistorial()" class="btn btn-success">Historial de Datos</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onReco()" class="btn btn-success">Recomendaciones de Riego</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onNoticias()" class="btn btn-success">Noticias</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onConfiguracion()" class="btn btn-success">Código Postales</button>
+        </li>
+    </ul>
+</div>
+
 <div class="login-container">
 
     <div class="glass-container">
-        <h2>Configuración del clima en tu localización</h2>
-        <h3>Código del País</h3>
-        <input type="text" placeholder="Por ejemplo, México (mx), Colombia (co), España (es)"><br><br><br><br>
-        <h3>Nombre de la localización</h3>
-        <input type="text" placeholder="Por ejemplo, Ciudad Valles, Buenos Aires, Ciudad de México">
-        <br><br>
-        <button class="btn btn-success">Guardar cambios</button>
+        <h2>CODIGOS POSTALES MAS IMPORTANTES DE MÉXICO</h2>
+
+        <p>01000 - Álvaro Obregón, Ciudad de México (San Ángel).</p>
+        <p>11520 - Miguel Hidalgo, Ciudad de México (Polanco).</p>
+        <p>06000 - Cuauhtémoc, Ciudad de México (Centro Histórico).</p>
+        <p>64000 - Monterrey, Nuevo León (Centro de Monterrey).</p>
+        <p>44100 - Guadalajara, Jalisco (Centro de Guadalajara).</p>
+        <p>76100 - Querétaro, Querétaro (Centro Histórico de Querétaro).</p>
+        <p>97100 - Mérida, Yucatán (Colonia México Norte).</p>
+        <p>32000 - Ciudad Juárez, Chihuahua (Centro de Ciudad Juárez).</p>
+        <p>20000 - Aguascalientes, Aguascalientes (Centro de Aguascalientes).</p>
+        <p>29000 - Tuxtla Gutiérrez, Chiapas (Centro de Tuxtla).</p>
+        <p>87000 - Ciudad Victoria, Tamaulipas (Centro de Ciudad Victoria).</p>
+        <p>50000 - Toluca, Estado de México (Centro de Toluca).</p>
+
+
+
+        <!-- <div class="perfil-container">
+            <h2>Perfil del Usuario</h2>
+            <div class="datos-usuario">
+                <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+                <p><strong>Apellido:</strong> {{ usuario.apellido }}</p>
+                <p><strong>Edad:</strong> {{ usuario.edad }}</p>
+                <p><strong>Email:</strong> {{ usuario.email }}</p>
+            </div> -->
     </div>
+
 </div>

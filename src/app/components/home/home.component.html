@@ -1,22 +1,56 @@
+<div class="header">
+    <br>
+    <h1 style="color: white;">SAMI</h1>
+    <br>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <button type="submit" (click)="onHome()" class="btn btn-success">Home</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onHistorial()" class="btn btn-success">Historial de Datos</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onReco()" class="btn btn-success">Recomendaciones de Riego</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onNoticias()" class="btn btn-success">Noticias</button>
+        </li>
+        <li class="nav-item">
+            <button type="submit" (click)="onConfiguracion()" class="btn btn-success">Código Postales</button>
+        </li>
+    </ul>
+</div>
 <div class="login-container">
-    <br><br><br>
+    <br>
     <div class="glass-container">
+        <br><br>
         <h1>Temperatura del suelo:</h1>
         <h2>24° C</h2>
         <br>
         <h1>Humedad del suelo:</h1>
-        <h2>45% de humedad</h2>
+        <h2>71% de humedad</h2>
         <br>
         <h1>Estado del suelo:</h1>
         <h2>Excelente</h2>
     </div>
     <div class="glass-container">
-        <h1>Clima de Cd. Valles</h1>
+
+        <h1>Estado del Clima</h1>
+        <h6>Ingresa el código postal y codigo de tu país para obtener los estados del clima de tu localidad</h6>
+        <form (submit)="submitLocation(zipCode, countryCode)">
+            <h4>Codigo Postal</h4>
+            <input type="text" class="form-control" placeholder="Ejemplo: 99000 (Ciudad de México)" #zipCode>
+            <h4>Codigo del País</h4>
+            <input type="text" class="form-control" placeholder="Ejemplo: mx (México)" #countryCode>
+            <button class="btn-block mt-2">Obtener clima</button>
+        </form>
         <br>
-        <h2>23° C</h2>
-        <br>
-        <h2>RealFeel 25° C</h2>
-        <br>
-        <h2>Mayormente nublado</h2>
+        <div *ngIf="weather" class="card card-body">
+            <h2>Temperatura de {{weather.name}}, {{weather.sys.country}}</h2>
+            <p>Temperatura: {{weather.main.temp}} °C</p>
+            <p>Temperatura máxima: {{weather.main.temp_max}} °C</p>
+            <p>Temperatura mínima: {{weather.main.temp_min}} °C</p>
+            <p>Humedad: {{weather.main.humidity}}% de humedad</p>
+        </div>
     </div>
 </div>

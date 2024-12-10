@@ -7,8 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { RecomendacionesComponent } from './components/recomendaciones/recomendaciones.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-
+import { RegistroComponent } from './components/registro/registro.component';
 
 
 export const routes: Routes = [
@@ -41,5 +40,9 @@ export const routes: Routes = [
     {
         path: "configuracion",
         component: ConfiguracionComponent
+    },
+    {
+        path: "registro",
+        component: RegistroComponent
     }
 ];
